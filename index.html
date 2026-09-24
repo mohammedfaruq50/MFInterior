@@ -656,7 +656,7 @@
       <!-- False Ceiling Work -->
       <div class="service-card reveal delay-1">
         <div>
-          <img src="/FalseCeilingCoverImg.jpg" alt="Gypsum false ceiling design with cove lighting">
+          <img src="public/FalseCeilingCoverImg.jpg" alt="Gypsum false ceiling design with cove lighting">
           <h3>False Ceiling Work</h3>
           <p>Gypsum board ceilings, modern cove lighting design, POP work, and wooden acoustic ceilings tailored for homes and offices.</p>
         </div>
@@ -784,26 +784,26 @@
     /* Gallery Data */
     const galleries = {
       ceiling: {
-  title: "False Ceiling & POP Designs",
-  items: [
-    { 
-      img: "/ceiling-design.jpg", 
-      title: "Modern Curved Cove Ceiling with Wooden Accent" 
-    },
-    { 
-      img: "/hall-ceiling.jpg", 
-      title: "Hall Gypsum False Ceiling" 
-    },
-    { 
-      img: "/wooden-ceiling.jpg", 
-      title: "Wooden Acoustic Ceiling Panels" 
-    },
-    { 
-      img: "/dining-room.jpg", 
-      title: "Dining Room POP Design" 
-    }
-  ]
-},
+        title: "False Ceiling & POP Designs",
+        items: [
+          { 
+            img: "public/ceiling-design.jpg", 
+            title: "Modern Curved Cove Ceiling with Wooden Accent" 
+          },
+          { 
+            img: "public/hall-ceiling.jpg", 
+            title: "Hall Gypsum False Ceiling" 
+          },
+          { 
+            img: "public/wooden-ceiling.jpg", 
+            title: "Wooden Acoustic Ceiling Panels" 
+          },
+          { 
+            img: "public/dining-room.jpg", 
+            title: "Dining Room POP Design" 
+          }
+        ]
+      },
       residential: {
         title: "Residential Interior Work",
         items: [
@@ -908,13 +908,11 @@
 
     function handleSwipeGesture() {
       const swipeDistance = touchEndX - touchStartX;
-      const minSwipeThreshold = 50; // Minimum pixel distance to trigger swipe
+      const minSwipeThreshold = 50;
 
       if (swipeDistance < -minSwipeThreshold) {
-        // Swiped Left -> Next Image
         navigateLightbox(1);
       } else if (swipeDistance > minSwipeThreshold) {
-        // Swiped Right -> Previous Image
         navigateLightbox(-1);
       }
     }
